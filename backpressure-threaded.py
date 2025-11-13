@@ -6,6 +6,16 @@ import time
 from datetime import datetime
 from collections import Counter
 
+    """
+    This script demonstrates how to use a message queue to buffer incoming 
+    messages from a realtime data source (like Bluesky Jetstream) and process 
+    them in parallel using multiple worker threads.
+
+    NOTE that it does not publish messages to Kafka, it only buffers them in memory
+    and simulates some sort of time-consuming processing (see line 73).
+    """
+
+
 # Queue to handle backpressure
 # Max 10,000 messages in queue to preserve memory
 message_queue = queue.Queue(maxsize=10000)
@@ -60,7 +70,7 @@ def worker(worker_id):
                     post_types[collection] += 1
                     
                     # Simulate slow work (database write, analysis, etc.)
-                    time.sleep(0.08)  # 10ms per message
+                    time.sleep(0.01)  # 10ms per message
                     
                     if post_types[collection] % 100 == 0:
                         print(f"[Worker {worker_id}] Processed {post_types[collection]} posts. Latest: {text}...")
