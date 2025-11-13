@@ -1,5 +1,6 @@
 # Learn Apache Kafka
 
+<img src="https://us.ovhcloud.com/sites/default/files/styles/desktop_full_width/public/2024-01/kafka.webp" style="align:right;float:right;max-width:40%;" alt="Apache Kafka Logo" />
 Learn how to work with Apache Kafka and distributed logs.
 
 ## Why use a distributed log?
