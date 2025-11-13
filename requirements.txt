@@ -1,0 +1,5 @@
+asyncio
+quixstreams
+websocket-client
+redis
+requests_sse
