@@ -12,9 +12,8 @@ messages from a realtime data source (like Bluesky Jetstream) and process
 them in parallel using multiple worker threads.
 
 NOTE that it does not publish messages to Kafka, it only buffers them in memory
-and simulates some sort of time-consuming processing (see line 73).
+and simulates some sort of time-consuming processing (see line 72).
 """
-
 
 # Queue to handle backpressure
 # Max 10,000 messages in queue to preserve memory
@@ -69,7 +68,7 @@ def worker(worker_id):
                     text = record.get('text', '')[:50]  # First 50 chars
                     post_types[collection] += 1
                     
-                    # Simulate slow work (database write, analysis, etc.)
+                    # Simulate slow work (database write, API call, analysis, etc.)
                     time.sleep(0.01)  # 10ms per message
                     
                     if post_types[collection] % 100 == 0:
