@@ -6,14 +6,14 @@ import time
 from datetime import datetime
 from collections import Counter
 
-    """
-    This script demonstrates how to use a message queue to buffer incoming 
-    messages from a realtime data source (like Bluesky Jetstream) and process 
-    them in parallel using multiple worker threads.
+"""
+This script demonstrates how to use a message queue to buffer incoming 
+messages from a realtime data source (like Bluesky Jetstream) and process 
+them in parallel using multiple worker threads.
 
-    NOTE that it does not publish messages to Kafka, it only buffers them in memory
-    and simulates some sort of time-consuming processing (see line 73).
-    """
+NOTE that it does not publish messages to Kafka, it only buffers them in memory
+and simulates some sort of time-consuming processing (see line 73).
+"""
 
 
 # Queue to handle backpressure

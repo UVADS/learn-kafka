@@ -2,10 +2,10 @@ import websocket
 import json
 from datetime import datetime
 
-    """
-    This script simply prints the rate of messages received from Bluesky Jetstream.
-    It performs no processing of data.
-    """
+"""
+This script simply prints the rate of messages received from Bluesky Jetstream.
+It performs no processing of data.
+"""
 
 message_count = 0
 start_time = datetime.now()

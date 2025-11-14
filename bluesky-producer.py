@@ -5,12 +5,12 @@ from datetime import datetime
 from quixstreams import Application
 from quixstreams.models import TopicConfig
 
-    """
-    This script demonstrates how to use a Kafka producer to stream real-time 
-    events from Bluesky Jetstream to a Kafka topic.
+"""
+This script demonstrates how to use a Kafka producer to stream real-time 
+events from Bluesky Jetstream to a Kafka topic.
 
-    NOTE that it does not parse/consume messages, it publishes/produces them to Kafka.
-    """
+NOTE that it does not parse/consume messages, it publishes/produces them to Kafka.
+"""
 
 KAFKA_BROKER = os.getenv("KAFKA_BROKER", "127.0.0.1:19092,127.0.0.1:29092,127.0.0.1:39092")
 
